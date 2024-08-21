@@ -33,8 +33,12 @@ Each program requires 4 things:
 
 * **ie.v :** This is the main instruction executor, that is, the CPU. It remains the same.
 
+![CPU data path](./Data%20Path.jpg)
+
 * **inst_{program_name} :** This is the instruction sequence for the program. It follows the specifications given in the instruction set, which is to be written directly in machine code. You can modify it to write your own programs ;)
 
 * **cpu_{program_name} :** It integrates the processor with the instructions in **inst_{program_name}** with **ie.v** (processor) which executes those instructions. The code skeleton remains the same, you only have to include the required **inst_{program_name}** to run. Alernatively, you can load this code onto an FPGA board and run it.
+
+![Blackbox model](./Blackbox%20model.png)
 
 * **tb_{program_name} :** This is the testbench code which can be run to see the output of **cpu_{program_name}**.
